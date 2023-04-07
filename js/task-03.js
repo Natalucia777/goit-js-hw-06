@@ -14,7 +14,7 @@ const images = [
   },
 ];
 
-const markup = images.map(({ url, alt }) => `<li class="pet-picture"><img src="${url}" alt="${alt}"></li>`).join('');
+const markup = images.map(({ url, alt }) => `<li class="item"><img src="${url}" alt="${alt} class="link"></li>`).join('');
 
 list.insertAdjacentHTML('beforeend', markup); 
 
