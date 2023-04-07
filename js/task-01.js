@@ -4,7 +4,6 @@ const quantityItems = itemsRef.forEach(function (number, index) {
   indexItems += Number(index);
 });
 console.log(`Number of categories: ${indexItems}`);
-
 let titlesContent = 0;
 let titleList = 0;
 itemsRef.forEach(function (content) {
