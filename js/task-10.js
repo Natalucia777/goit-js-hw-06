@@ -18,8 +18,7 @@ function createBoxes(amount) {
     boxContent.insertAdjacentHTML("beforeend", blockContent); 
   }
 }
-
 function destroyBoxes() {
-
+  boxContent.innerHTML = "";
 }
 
