@@ -12,5 +12,5 @@ newBodyColor.buttonChengeColor.addEventListener('click', onChangeColor);
 function onChangeColor() {
 const bodyNevColor = getRandomHexColor();
   document.body.style.backgroundColor = bodyNevColor;
-  newBodyColor.nameBodyColor.backgroundColorValue.textContent = bodyNevColor;
+  newBodyColor.textContent = bodyNevColor;
 }
