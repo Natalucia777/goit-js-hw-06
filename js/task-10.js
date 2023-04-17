@@ -12,17 +12,20 @@ btnDataCreate.addEventListener('click', () => { const val = Number(controlInput.
 function createBoxes(amount) {
   const container = document.getElementById('boxes');
   let boxSize = 30;
-  for (let i = 0; i < amount; i +=1) {
-    boxSize = boxSize + i * 10;
-    let blockContent = document.createElement('div');
-    blockContent.style.width = `${boxSize}px`;
-    blockContent.style.height = `${boxSize}px`;
-    blockContent.style.backgroundColor = getRandomHexColor();
-    boxContent.appendChild(blockContent);
+    if (amount >= 1 && amount <= 100) {
+      for (let i = 0, step = 0; i < amount; i += 1, step += 10) {
+        let blockContent = document.createElement('div');
+        blockContent.style.width = `${boxSize + step}px`;
+        blockContent.style.height = `${boxSize + step}px`;
+        blockContent.style.backgroundColor = getRandomHexColor();
+        boxContent.appendChild(blockContent);
+      }
+    } else {
+      return alert('Please enter a valid value from 1 to 100 !'); }
   }
-}
 const btnDataDestroy = document.querySelector('[data-destroy]');
 btnDataDestroy.addEventListener('click', () => { destroyBoxes(); });
 function destroyBoxes() {
+  controlInput.value = '';
   boxContent.innerHTML = "";
 }
