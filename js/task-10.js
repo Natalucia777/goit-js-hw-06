@@ -12,7 +12,7 @@ btnDataCreate.addEventListener('click', () => { const val = Number(controlInput.
 function createBoxes(amount) {
   const container = document.getElementById('boxes');
   let boxSize = 30;
-    if (amount >= 1 && amount <= 100) {
+    if (amount >= Number(controlInput.min) && amount <= Number(controlInput.max)) {
       for (let i = 0, step = 0; i < amount; i += 1, step += 10) {
         let blockContent = document.createElement('div');
         blockContent.style.width = `${boxSize + step}px`;
